@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import 'package:noteappwithfirebase/data/folder_data_list.dart';
+import '../models/folder_data_model.dart';
 import '../utils/color.dart';
 import '../utils/responsive_size.dart';
 
 class AppBarInFolderScreenWidget extends StatelessWidget {
   const AppBarInFolderScreenWidget({
     super.key,
-    required this.responsiveSize,
+    required this.responsiveSize,  required this.folderData,
   });
-
+  final FolderDataModel folderData;
   final ResponsiveSize responsiveSize;
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -39,11 +39,11 @@ class AppBarInFolderScreenWidget extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 20,
                             color: baseColor
-                        )),
+                        ),),
                   ],
                 ),
 
-                Text("Personal", style: TextStyle(
+                Text(folderData.title, style: TextStyle(
                     fontSize: 22,
                     color: black,
                     fontWeight: FontWeight.bold
