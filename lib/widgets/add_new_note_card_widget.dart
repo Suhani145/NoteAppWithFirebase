@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:noteappwithfirebase/views/create_note_screen.dart';
 
 import '../utils/color.dart';
 import '../utils/responsive_size.dart';
@@ -35,7 +37,9 @@ class AddNewNoteCardWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
-                onPressed: (){},
+                onPressed: (){
+                  Get.to(CreateNoteScreen());
+                },
                 child: Text("+", style: TextStyle(
                     fontSize: 20
                 ),),

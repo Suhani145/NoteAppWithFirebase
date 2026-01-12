@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:noteappwithfirebase/views/create_note_screen.dart';
+import 'package:noteappwithfirebase/views/home_screen.dart';
+import 'package:noteappwithfirebase/views/settings_screen.dart';
 import '../utils/color.dart';
 
 class NavigationBarWithFAB extends StatelessWidget {
@@ -29,7 +33,9 @@ class NavigationBarWithFAB extends StatelessWidget {
                     Row(
                       children: [
                         IconButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              Get.to(HomeScreen());
+                            },
                             icon:Icon(Icons.sticky_note_2_outlined,
                                 color: iconColor)),
                         SizedBox(width: screenWidth * 0.045),
@@ -47,7 +53,9 @@ class NavigationBarWithFAB extends StatelessWidget {
                                 color: iconColor)),
                         SizedBox(width: screenWidth * 0.045),
                         IconButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              Get.to(SettingsScreen());
+                            },
                             icon: Icon(Icons.settings,
                                 color: iconColor)),
                       ],
@@ -59,7 +67,9 @@ class NavigationBarWithFAB extends StatelessWidget {
         ),
 
         Center(
-          child: ElevatedButton(onPressed: (){},
+          child: ElevatedButton(onPressed: (){
+            Get.to(CreateNoteScreen());
+          },
               style: ElevatedButton.styleFrom(
                 backgroundColor: baseColor,
                 foregroundColor: white,

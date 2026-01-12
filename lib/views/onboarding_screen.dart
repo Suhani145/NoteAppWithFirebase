@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:noteappwithfirebase/utils/color.dart';
 import 'package:noteappwithfirebase/views/home_screen.dart';
+import 'package:noteappwithfirebase/views/signin_screen.dart';
+import 'signup_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -57,7 +59,7 @@ class OnboardingScreen extends StatelessWidget {
                 SizedBox(height: 30),
                 ElevatedButton(
                   onPressed: () {
-                    Get.to(HomeScreen());
+                    Get.to(SignUpScreen());
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: baseColor,
@@ -78,7 +80,9 @@ class OnboardingScreen extends StatelessWidget {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(SignInScreen());
+                      },
                       child: Text(
                         'Log in',
                         style: TextStyle(
