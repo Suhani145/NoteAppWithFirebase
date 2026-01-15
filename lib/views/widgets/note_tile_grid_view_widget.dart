@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import '../data/file_data_list.dart';
-import '../utils/responsive_size.dart';
+import '../../data/file_data_list.dart';
+import '../../utils/responsive_size.dart';
 import 'add_new_note_card_widget.dart';
 import 'note_tile_widget.dart';
 

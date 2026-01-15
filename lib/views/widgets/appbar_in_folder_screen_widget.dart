@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:noteappwithfirebase/data/folder_data_list.dart';
-import '../models/folder_data_model.dart';
-import '../utils/color.dart';
-import '../utils/responsive_size.dart';
+import '../../models/folder_data_model.dart';
+import '../../utils/color.dart';
+import '../../utils/responsive_size.dart';
 
 class AppBarInFolderScreenWidget extends StatelessWidget {
   const AppBarInFolderScreenWidget({

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../utils/color.dart';
-import '../utils/responsive_size.dart';
+import '../../utils/color.dart';
+import '../../utils/responsive_size.dart';
 
 class AuthActionButton extends StatelessWidget {
   const AuthActionButton({

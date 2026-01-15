@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:noteappwithfirebase/utils/responsive_size.dart';
 import 'package:noteappwithfirebase/views/home_screen.dart';
 import '../utils/color.dart';
-import '../widgets/auth_action_button_widget.dart';
-import '../widgets/social_auth_button_widget.dart';
-import '../widgets/text_form_field_card.dart';
+import 'widgets/auth_action_button_widget.dart';
+import 'widgets/social_auth_button_widget.dart';
+import 'widgets/text_form_field_card.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});

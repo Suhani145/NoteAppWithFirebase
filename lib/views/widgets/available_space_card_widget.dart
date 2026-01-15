@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/color.dart';
+import '../../utils/color.dart';
 
 class AvailableSpaceCard extends StatelessWidget {
   const AvailableSpaceCard({
@@ -8,7 +8,6 @@ class AvailableSpaceCard extends StatelessWidget {
     required this.screenWidth,
     required this.screenHeight,
   });
-
   final double screenWidth;
   final double screenHeight;
 

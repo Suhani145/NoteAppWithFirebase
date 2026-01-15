@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../utils/color.dart';
-import '../utils/responsive_size.dart';
+import '../../utils/color.dart';
+import '../../utils/responsive_size.dart';
 
 class NoteTileWidget extends StatelessWidget {
   const NoteTileWidget({

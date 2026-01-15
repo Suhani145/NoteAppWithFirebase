@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:noteappwithfirebase/data/folder_data_list.dart';
 import '../utils/color.dart';
-import '../widgets/appbar_in_home_screen_widget.dart';
-import '../widgets/available_space_card_widget.dart';
-import '../widgets/folder_card_widget.dart';
-import '../widgets/navigation_bar_with_fab_widget.dart';
+import 'widgets/appbar_in_home_screen_widget.dart';
+import 'widgets/available_space_card_widget.dart';
+import 'widgets/folder_card_widget.dart';
+import 'widgets/navigation_bar_with_fab_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

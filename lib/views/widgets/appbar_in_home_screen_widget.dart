@@ -7,7 +7,6 @@ class AppBarInHomeScreen extends StatelessWidget {
     required this.screenHeight,
     required this.screenWidth,
   });
-
   final double screenHeight;
   final double screenWidth;
 

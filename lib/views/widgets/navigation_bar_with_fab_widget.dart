@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:noteappwithfirebase/views/create_note_screen.dart';
 import 'package:noteappwithfirebase/views/home_screen.dart';
 import 'package:noteappwithfirebase/views/settings_screen.dart';
-import '../utils/color.dart';
+import '../../utils/color.dart';
 
 class NavigationBarWithFAB extends StatelessWidget {
   const NavigationBarWithFAB({

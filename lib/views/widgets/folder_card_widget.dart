@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:noteappwithfirebase/views/folder_screen.dart';
-import '../models/folder_data_model.dart';
-import '../utils/color.dart';
+import '../../models/folder_data_model.dart';
+import '../../utils/color.dart';
 
 class FolderCardWidget extends StatelessWidget {
   const FolderCardWidget(

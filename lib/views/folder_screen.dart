@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:noteappwithfirebase/models/folder_data_model.dart';
 import 'package:noteappwithfirebase/utils/color.dart';
 import 'package:noteappwithfirebase/utils/responsive_size.dart';
-import '../widgets/appbar_in_folder_screen_widget.dart';
-import '../widgets/note_tile_grid_view_widget.dart';
+import 'widgets/appbar_in_folder_screen_widget.dart';
+import 'widgets/note_tile_grid_view_widget.dart';
 class FolderScreen extends StatelessWidget {
   const FolderScreen({super.key, required this.folderData});
   final FolderDataModel folderData;
