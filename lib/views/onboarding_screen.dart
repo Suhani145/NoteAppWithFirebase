@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:noteappwithfirebase/utils/color.dart';
-import 'package:noteappwithfirebase/views/home_screen.dart';
-import 'package:noteappwithfirebase/views/signin_screen.dart';
+import '../utils/color.dart';
+import '../utils/responsive_size.dart';
+import '../views/signin_screen.dart';
 import 'signup_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -10,17 +10,15 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height;
-    final screenWidth = MediaQuery.of(context).size.width;
+    ResponsiveSize responsiveSize = ResponsiveSize(context);
 
     return DefaultTextStyle(
       style: TextStyle(decoration: TextDecoration.none),
       child: SingleChildScrollView(
         child: Container(
-            // constraints: BoxConstraints.expand(),
             color: screenBG,
-            height: screenHeight,
-            width: screenWidth,
+            height: responsiveSize.screenHeight,
+            width: responsiveSize.screenWidth,
             child: Column(
               spacing: 10,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -64,7 +62,8 @@ class OnboardingScreen extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       backgroundColor: baseColor,
                       foregroundColor: white,
-                      fixedSize: Size(screenWidth * 0.4, screenHeight * 0.07),
+                      fixedSize: Size(responsiveSize.screenWidth * 0.4,
+                          responsiveSize.screenHeight * 0.07),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadiusGeometry.circular(20))),
                   child: Text("Create Account", style: TextStyle(fontSize: 18)),

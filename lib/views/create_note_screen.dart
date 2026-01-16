@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:noteappwithfirebase/utils/color.dart';
-import 'package:noteappwithfirebase/utils/responsive_size.dart';
-import 'package:noteappwithfirebase/views/home_screen.dart';
-import 'package:noteappwithfirebase/views/widgets/popup_menu_widget.dart';
+import '../utils/color.dart';
+import '../utils/responsive_size.dart';
+import '../views/home_screen.dart';
+import '../views/widgets/popup_menu_widget.dart';
 class CreateNoteScreen extends StatelessWidget {
   const CreateNoteScreen({super.key});
 

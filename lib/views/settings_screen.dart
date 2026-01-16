@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:noteappwithfirebase/utils/color.dart';
-import 'package:noteappwithfirebase/utils/responsive_size.dart';
-import 'package:noteappwithfirebase/views/onboarding_screen.dart';
+import '../utils/color.dart';
+import '../utils/responsive_size.dart';
+import '../views/onboarding_screen.dart';
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
 
