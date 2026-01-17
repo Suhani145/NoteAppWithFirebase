@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:noteappwithfirebase/views/onboarding_screen.dart';
 import 'package:get/get.dart';
+import 'package:noteappwithfirebase/wrappers/auth_wrapper.dart';
 class NoteTakingApp extends StatelessWidget {
   const NoteTakingApp({super.key});
   @override
@@ -8,7 +9,7 @@ class NoteTakingApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: OnboardingScreen(),
+      home: AuthWrapper(),
     );
   }
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:noteappwithfirebase/controllers/auth_controller.dart';
 import '../utils/responsive_size.dart';
 import '../views/home_screen.dart';
 import '../utils/color.dart';
@@ -11,6 +13,9 @@ class SignInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final authController = Get.find<AuthController>();
+    final emailController = TextEditingController();
+    final passwordController = TextEditingController();
     ResponsiveSize responsiveSize = ResponsiveSize(context);
     return DefaultTextStyle(
       style: TextStyle(decoration: TextDecoration.none),
@@ -35,14 +40,18 @@ class SignInScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 17, color: black),
                   ),
                   TextFormFieldCard(
+                    textEditingController: emailController,
                     labelText: "Email",
                   ),
-                  TextFormFieldCard(labelText: "Password"),
+                  TextFormFieldCard(labelText: "Password",
+                    textEditingController: passwordController,),
                   SizedBox(height: responsiveSize.screenHeight * 0.03),
                   AuthActionButton(
                     responsiveSize: responsiveSize,
                     authAction: 'Log in',
-                    navigationScreen: HomeScreen(),
+                    onTap: (){
+                      authController.login(emailController.text, passwordController.text);
+                    },
                   ),
                   SizedBox(height: responsiveSize.screenHeight * 0.001),
                   Center(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:noteappwithfirebase/controllers/auth_controller.dart';
 import '../utils/color.dart';
 import '../utils/responsive_size.dart';
 import '../views/onboarding_screen.dart';
@@ -8,6 +9,7 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final authController = Get.find<AuthController>();
     ResponsiveSize responsiveSize = ResponsiveSize(context);
     return DefaultTextStyle(
       style: TextStyle(decoration: TextDecoration.none),
@@ -65,7 +67,7 @@ class SettingsScreen extends StatelessWidget {
               SizedBox(height: responsiveSize.screenHeight*0.05),
               Center(
                 child: ElevatedButton(onPressed: (){
-                  Get.to(OnboardingScreen());
+                  authController.logout();
                 },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: baseColor,

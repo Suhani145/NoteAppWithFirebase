@@ -7,18 +7,16 @@ import '../../utils/responsive_size.dart';
 class AuthActionButton extends StatelessWidget {
   const AuthActionButton({
     super.key,
-    required this.responsiveSize, required this.authAction, required this.navigationScreen,
+    required this.responsiveSize, required this.authAction, required this.onTap,
   });
 
   final ResponsiveSize responsiveSize;
   final String authAction;
-  final Widget navigationScreen;
+   final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(onPressed: (){
-      Get.to(navigationScreen);
-    },
+    return ElevatedButton(onPressed: onTap,
         style: ElevatedButton.styleFrom(
           backgroundColor: baseColor,
           foregroundColor:  white,
