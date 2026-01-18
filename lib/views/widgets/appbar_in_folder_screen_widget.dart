@@ -7,10 +7,13 @@ import '../../utils/responsive_size.dart';
 class AppBarInFolderScreenWidget extends StatelessWidget {
   const AppBarInFolderScreenWidget({
     super.key,
-    required this.responsiveSize,  required this.folderData,
+    required this.responsiveSize,
+    required this.folderData,
   });
+
   final FolderDataModel folderData;
   final ResponsiveSize responsiveSize;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -24,47 +27,35 @@ class AppBarInFolderScreenWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     IconButton(
                       onPressed: Get.back,
                       icon: Icon(Icons.arrow_back_ios,
-                          color: baseColor,
-                          size: 25),
+                          color: baseColor, size: 25),
                     ),
-                    Text("Back",
-                        style: TextStyle(
-                            fontSize: 20,
-                            color: baseColor
-                        ),),
+                    Text(
+                      "Back",
+                      style: TextStyle(fontSize: 20, color: baseColor),
+                    ),
                   ],
                 ),
-
-                Text(folderData.title, style: TextStyle(
-                    fontSize: 22,
-                    color: black,
-                    fontWeight: FontWeight.bold
-                )),
+                Text(folderData.title,
+                    style: TextStyle(
+                        fontSize: 22,
+                        color: black,
+                        fontWeight: FontWeight.bold)),
                 Row(
                   children: [
-                    Icon(Icons.search,
-                        color: baseColor,
-                        size: 25
-                    ),
+                    Icon(Icons.search, color: baseColor, size: 25),
                     Text(" Search",
-                        style: TextStyle(
-                            fontSize: 20,
-                            color: baseColor
-                        )
-                    )
+                        style: TextStyle(fontSize: 20, color: baseColor))
                   ],
                 ),
               ],
             ),
-          )
-      ),
+          )),
     );
   }
 }

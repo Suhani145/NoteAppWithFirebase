@@ -7,9 +7,9 @@ import '../../utils/color.dart';
 class FolderCardWidget extends StatelessWidget {
   const FolderCardWidget(
       {super.key,
-        required this.screenWidth,
-        required this.screenHeight,
-        required this.folderData});
+      required this.screenWidth,
+      required this.screenHeight,
+      required this.folderData});
 
   final double screenWidth;
   final double screenHeight;

@@ -5,12 +5,10 @@ class FolderDataModel {
   final String title;
   final int fileNumber;
   final double fileSize;
-  FolderDataModel({
-    required this.icon,
-    required this.title,
-    required this.fileNumber,
-    required this.fileSize
-});
+
+  FolderDataModel(
+      {required this.icon,
+      required this.title,
+      required this.fileNumber,
+      required this.fileSize});
 }
-
-

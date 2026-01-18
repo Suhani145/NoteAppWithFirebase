@@ -43,14 +43,17 @@ class SignInScreen extends StatelessWidget {
                     textEditingController: emailController,
                     labelText: "Email",
                   ),
-                  TextFormFieldCard(labelText: "Password",
-                    textEditingController: passwordController,),
+                  TextFormFieldCard(
+                    labelText: "Password",
+                    textEditingController: passwordController,
+                  ),
                   SizedBox(height: responsiveSize.screenHeight * 0.03),
                   AuthActionButton(
                     responsiveSize: responsiveSize,
                     authAction: 'Log in',
-                    onTap: (){
-                      authController.login(emailController.text, passwordController.text);
+                    onTap: () {
+                      authController.login(
+                          emailController.text, passwordController.text);
                     },
                   ),
                   SizedBox(height: responsiveSize.screenHeight * 0.001),

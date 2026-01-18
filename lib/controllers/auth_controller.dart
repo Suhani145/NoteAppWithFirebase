@@ -4,43 +4,42 @@ import 'package:noteappwithfirebase/models/auth_model.dart';
 import 'package:noteappwithfirebase/views/home_screen.dart';
 import 'package:noteappwithfirebase/views/onboarding_screen.dart';
 
-class AuthController extends GetxController{
-
+class AuthController extends GetxController {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   Rx<AuthUserModel?> currentUser = Rx<AuthUserModel?>(null);
 
   @override
-  void onInit(){
+  void onInit() {
     super.onInit();
     //listening firebase auth
-    _firebaseAuth.authStateChanges().listen((firebaseUser){
-      if(firebaseUser == null){
+    _firebaseAuth.authStateChanges().listen((firebaseUser) {
+      if (firebaseUser == null) {
         currentUser.value = null;
-      }else{
-        currentUser.value = AuthUserModel(uid: firebaseUser.uid, email: firebaseUser.email);
+      } else {
+        currentUser.value =
+            AuthUserModel(uid: firebaseUser.uid, email: firebaseUser.email);
       }
-    }
-
-    );
-
+    });
   }
 
   //login
-Future<void> login(String email, String password) async{
-    try{
-      await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
+  Future<void> login(String email, String password) async {
+    try {
+      await _firebaseAuth.signInWithEmailAndPassword(
+          email: email, password: password);
       Get.to(HomeScreen());
-    }catch(e){
+    } catch (e) {
       print("Error in login : $e");
     }
-}
+  }
 
 //SignUp
-Future<void> signUp(String email, String password)async{
-    try{
-      await _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
+  Future<void> signUp(String email, String password) async {
+    try {
+      await _firebaseAuth.createUserWithEmailAndPassword(
+          email: email, password: password);
       Get.to(HomeScreen());
-    }on FirebaseAuthException catch (e) {
+    } on FirebaseAuthException catch (e) {
       print("FirebaseAuthException");
       print("Code: ${e.code}");
       print("Message: ${e.message}");
@@ -49,11 +48,11 @@ Future<void> signUp(String email, String password)async{
       print("Unknown error: $e");
       Get.snackbar("Error", e.toString());
     }
-}
+  }
 
 //logout
-Future<void> logout()async{
-   await _firebaseAuth.signOut();
-   Get.to(OnboardingScreen());
-}
+  Future<void> logout() async {
+    await _firebaseAuth.signOut();
+    Get.to(OnboardingScreen());
+  }
 }

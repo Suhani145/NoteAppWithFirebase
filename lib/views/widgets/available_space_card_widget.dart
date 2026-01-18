@@ -8,16 +8,17 @@ class AvailableSpaceCard extends StatelessWidget {
     required this.screenWidth,
     required this.screenHeight,
   });
+
   final double screenWidth;
   final double screenHeight;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: screenWidth*0.85,
-      height: screenHeight* 0.16,
+      width: screenWidth * 0.85,
+      height: screenHeight * 0.16,
       child: Card(
-        elevation: 10,
+          elevation: 10,
           shadowColor: baseColor,
           color: baseColor,
           child: Padding(
@@ -25,18 +26,15 @@ class AvailableSpaceCard extends StatelessWidget {
             child: Row(
               children: [
                 SizedBox(
-                  width: screenWidth*0.15,
-                  height: screenHeight* 0.065,
+                  width: screenWidth * 0.15,
+                  height: screenHeight * 0.065,
                   child: Card(
-
                       shadowColor: white,
                       color: Colors.transparent,
                       child: Icon(Icons.pie_chart_sharp,
-                          size: 30, color: screenBG)
-                  ),
+                          size: 30, color: screenBG)),
                 ),
                 SizedBox(width: screenWidth * 0.06),
-
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -45,20 +43,17 @@ class AvailableSpaceCard extends StatelessWidget {
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: white,
-                            fontSize: 20
-                        )),
+                            fontSize: 20)),
                     Text("20.254 GB of 25 GB used",
                         style: TextStyle(
-                          //fontWeight: FontWeight.bold,
+                            //fontWeight: FontWeight.bold,
                             color: white,
-                            fontSize: 15
-                        )),
+                            fontSize: 15)),
                   ],
                 )
               ],
             ),
-          )
-      ),
+          )),
     );
   }
 }

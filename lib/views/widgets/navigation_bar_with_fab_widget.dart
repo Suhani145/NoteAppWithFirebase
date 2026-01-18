@@ -33,55 +33,52 @@ class NavigationBarWithFAB extends StatelessWidget {
                     Row(
                       children: [
                         IconButton(
-                            onPressed: (){
+                            onPressed: () {
                               Get.to(HomeScreen());
                             },
-                            icon:Icon(Icons.sticky_note_2_outlined,
+                            icon: Icon(Icons.sticky_note_2_outlined,
                                 color: iconColor)),
                         SizedBox(width: screenWidth * 0.045),
                         IconButton(
-                            onPressed: (){},
-                            icon: Icon(Icons.event_note,
-                                color: iconColor)),
+                            onPressed: () {},
+                            icon: Icon(Icons.event_note, color: iconColor)),
                       ],
                     ),
                     Row(
                       children: [
                         IconButton(
-                            onPressed: (){},
+                            onPressed: () {},
                             icon: Icon(Icons.lightbulb_outline,
                                 color: iconColor)),
                         SizedBox(width: screenWidth * 0.045),
                         IconButton(
-                            onPressed: (){
+                            onPressed: () {
                               Get.to(SettingsScreen());
                             },
-                            icon: Icon(Icons.settings,
-                                color: iconColor)),
+                            icon: Icon(Icons.settings, color: iconColor)),
                       ],
                     ),
                   ],
                 ),
-              )
-          ),
+              )),
         ),
-
         Center(
-          child: ElevatedButton(onPressed: (){
-            Get.to(CreateNoteScreen());
-          },
+          child: ElevatedButton(
+              onPressed: () {
+                Get.to(CreateNoteScreen());
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: baseColor,
                 foregroundColor: white,
-                fixedSize: Size(screenWidth * 0.1, screenHeight *0.065),
+                fixedSize: Size(screenWidth * 0.1, screenHeight * 0.065),
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15)
-                ),
+                    borderRadius: BorderRadius.circular(15)),
               ),
-              child: Icon(Icons.add,
+              child: Icon(
+                Icons.add,
                 size: 20,
-                fontWeight: FontWeight.w700,)
-          ),
+                fontWeight: FontWeight.w700,
+              )),
         ),
       ],
     );

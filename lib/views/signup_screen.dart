@@ -47,14 +47,18 @@ class SignUpScreen extends StatelessWidget {
                     labelText: "Email",
                     textEditingController: emailController,
                   ),
-                  TextFormFieldCard(labelText: "Password", textEditingController:  passwordController,),
+                  TextFormFieldCard(
+                    labelText: "Password",
+                    textEditingController: passwordController,
+                  ),
                   // TextFormFieldCard(labelText: "Confirm Password"),
                   SizedBox(height: responsiveSize.screenHeight * 0.03),
                   AuthActionButton(
                     responsiveSize: responsiveSize,
                     authAction: 'Sign Up',
-                    onTap: (){
-                      authController.signUp(emailController.text, passwordController.text);
+                    onTap: () {
+                      authController.signUp(
+                          emailController.text, passwordController.text);
                     },
                   ),
                   SizedBox(height: responsiveSize.screenHeight * 0.001),

@@ -5,7 +5,10 @@ import '../../utils/responsive_size.dart';
 class NoteTileWidget extends StatelessWidget {
   const NoteTileWidget({
     super.key,
-    required this.responsiveSize, required this.title, required this.description, required this.dateTime,
+    required this.responsiveSize,
+    required this.title,
+    required this.description,
+    required this.dateTime,
   });
 
   final ResponsiveSize responsiveSize;
@@ -23,21 +26,22 @@ class NoteTileWidget extends StatelessWidget {
             spacing: 20,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title,
+              Text(
+                title,
                 style: TextStyle(
-                    color: black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold
+                    color: black, fontSize: 20, fontWeight: FontWeight.bold),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+              Text(
+                description,
+                style: TextStyle(
+                  color: black,
+                  fontSize: 18,
                 ),
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,),
-              Text(description,
-                  style: TextStyle(
-                    color: black,
-                    fontSize: 18,
-                  ),
-                  maxLines: _maxLineForDescription(description),
-          overflow: TextOverflow.ellipsis,),
+                maxLines: _maxLineForDescription(description),
+                overflow: TextOverflow.ellipsis,
+              ),
               Text(dateTime.toString(),
                   style: TextStyle(
                     color: black,
@@ -45,20 +49,17 @@ class NoteTileWidget extends StatelessWidget {
                   ))
             ],
           ),
-        )
-    );
+        ));
   }
 }
 
-int? _maxLineForDescription(String text){
+int? _maxLineForDescription(String text) {
   int length = text.length;
-  if (length < 80){
+  if (length < 80) {
     return 2;
-  }
-  else if(length < 200){
+  } else if (length < 200) {
     return 4;
-  }
-  else{
+  } else {
     return 7;
   }
 }

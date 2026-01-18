@@ -21,10 +21,12 @@ class HomeScreen extends StatelessWidget {
             children: [
               SizedBox(height: 35),
               AppBarInHomeScreen(
-                  screenHeight: responsiveSize.screenHeight, screenWidth: responsiveSize.screenWidth),
+                  screenHeight: responsiveSize.screenHeight,
+                  screenWidth: responsiveSize.screenWidth),
               SizedBox(height: responsiveSize.screenHeight * 0.01),
               AvailableSpaceCard(
-                  screenWidth: responsiveSize.screenWidth, screenHeight: responsiveSize.screenHeight),
+                  screenWidth: responsiveSize.screenWidth,
+                  screenHeight: responsiveSize.screenHeight),
               SizedBox(height: 35),
               Expanded(
                 child: GridView.builder(
@@ -40,10 +42,10 @@ class HomeScreen extends StatelessWidget {
                     }),
               ),
               NavigationBarWithFAB(
-                  screenWidth: responsiveSize.screenWidth, screenHeight: responsiveSize.screenHeight),
+                  screenWidth: responsiveSize.screenWidth,
+                  screenHeight: responsiveSize.screenHeight),
             ],
           )),
     );
   }
 }
-
